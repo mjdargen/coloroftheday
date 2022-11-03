@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-size: 2em;
+    font-family: 'JetBrains Mono';
+    min-width: 400px;
+}
+
+body>div {
+    display: table;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+body>div>div {
+    display: table-row;
+}
+
+body>div>div>div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#hexColor {
+    margin-bottom: 0;
+}
+
+#rgbColor {
+    margin-top: 0;
+}
