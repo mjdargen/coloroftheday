@@ -19,15 +19,34 @@ function loadColor() {
 
     // testing loop
     // for (let i = 0; i < 1000; i++) {
-    //     console.log(mulberry32(year + month + day + weekDay));
-    //     console.log(mulberry32(year - month - day - weekDay));
     //     console.log(mulberry32(year * month + day + weekDay));
+    //     console.log(mulberry32(year * month - day - weekDay));
+    //     console.log(mulberry32(year + month + day + weekDay));
+    // }
+
+    // testing repeat loop
+    // for (let i = 2000; i < 2050; i++) {
+    //     for (let j = 0; j < 12; j++) {
+    //         for (let k = 1; k < 32; k++) {
+    //             for (let l = 0; l < 7; l++) {
+    //                 let r = i * j + k + l;
+    //                 let g = i * j - k - l;
+    //                 let b = i + j + k + l
+    //                 if (r === g)
+    //                     console.log("1", i, j, k, l);
+    //                 if (r === b)
+    //                     console.log("2", i, j, k, l);
+    //                 if (g === b)
+    //                     console.log("3", i, j, k, l);
+    //             }
+    //         }
+    //     }
     // }
 
     // compute pseudorandom colors for each day
-    let r = mulberry32(year + month + day + weekDay);
-    let g = mulberry32(year - month - day - weekDay);
-    let b = mulberry32(year * month + day + weekDay);
+    let r = mulberry32(year * month + day + weekDay);
+    let g = mulberry32(year * month - day - weekDay);
+    let b = mulberry32(year + month + day + weekDay);
 
     // compute rgb/hex and complemntary value
     let bgColor = `rgb(${r}, ${g}, ${b})`;
