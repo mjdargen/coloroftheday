@@ -6,9 +6,9 @@ function loadColor() {
 
     // retrieve date information
     const d = new Date();
-    const year = d.getFullYear();   // Get year as a four digit number(yyyy)
-    const month = d.getMonth();     // Get month as a number(0 - 11)
-    const day = d.getDate();        // Get day as a number(1 - 31)
+    const year = d.getFullYear();   // Get year as a four digit number (yyyy)
+    const month = d.getMonth();     // Get month as a number (0-11)
+    const day = d.getDate();        // Get day as a number (1-31)
     const weekDay = d.getDay();     // Get weekday as a number (0-6)
 
     // randomly generate colors for testing
@@ -48,7 +48,7 @@ function loadColor() {
     let g = mulberry32(year * month - day - weekDay);
     let b = mulberry32(year + month + day + weekDay);
 
-    // compute rgb/hex and complemntary value
+    // compute rgb/hex and complementary value
     let bgColor = `rgb(${r}, ${g}, ${b})`;
     let bgHex = "#" + hexConversion(r) + hexConversion(g) + hexConversion(b);
     let color = computeColor(r, g, b);
