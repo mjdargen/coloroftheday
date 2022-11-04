@@ -1,3 +1,5 @@
 # coloroftheday
 
-Website that generates a new random color for each day.
+Website that chooses a random color of the day!  
+
+Visible at https://dargen.io/coloroftheday/  
