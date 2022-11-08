@@ -18,31 +18,31 @@ function loadColor() {
     // const weekDay = Math.floor(Math.random() * 6);  // Get weekday as a number (0-6)
 
     // testing repeat loop
-    for (let i = 2000; i < 2023; i++) {
-        for (let j = 0; j < 12; j++) {
-            for (let k = 1; k < 32; k++) {
-                for (let l = 0; l < 7; l++) {
-                    let r = i - 2000 << 6 * 3 | j << 6 * 2 | k << 6 * 1 | l;
-                    let g = j << 6 * 3 | k << 6 * 2 | l << 6 * 1 | i - 2000;
-                    let b = i << 6 * 3 | l << 6 * 2 | j - 2000 << 6 * 1 | k;
-                    if (true) {
-                        r = mulberry32(r);
-                        g = mulberry32(g);
-                        b = mulberry32(b);
-                        console.log(`rgb(${r}, ${g}, ${b})`);
-                    }
-                    else {
-                        if (r === g)
-                            console.log("1", i, j, k, l);
-                        if (r === b)
-                            console.log("2", i, j, k, l);
-                        if (g === b)
-                            console.log("3", i, j, k, l);
-                    }
-                }
-            }
-        }
-    }
+    // for (let i = 2000; i < 2023; i++) {
+    //     for (let j = 0; j < 12; j++) {
+    //         for (let k = 1; k < 32; k++) {
+    //             for (let l = 0; l < 7; l++) {
+    //                 let r = i - 2000 << 6 * 3 | j << 6 * 2 | k << 6 * 1 | l;
+    //                 let g = j << 6 * 3 | k << 6 * 2 | l << 6 * 1 | i - 2000;
+    //                 let b = i << 6 * 3 | l << 6 * 2 | j - 2000 << 6 * 1 | k;
+    //                 if (true) {
+    //                     r = mulberry32(r);
+    //                     g = mulberry32(g);
+    //                     b = mulberry32(b);
+    //                     console.log(`rgb(${r}, ${g}, ${b})`);
+    //                 }
+    //                 else {
+    //                     if (r === g)
+    //                         console.log("1", i, j, k, l);
+    //                     if (r === b)
+    //                         console.log("2", i, j, k, l);
+    //                     if (g === b)
+    //                         console.log("3", i, j, k, l);
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 
     // compute pseudorandom colors for each day
     let r = year - 2000 << 6 * 3 | month << 6 * 2 | day << 6 * 1 | weekDay;
